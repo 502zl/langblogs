@@ -4,33 +4,6 @@
   
     
     <entry>
-      <title>数据结构-图</title>
-      <link href="/langblogs/posts/18.html"/>
-      <url>/langblogs/posts/18.html</url>
-      
-        <content type="html"><![CDATA[<h1 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h1>]]></content>
-      
-      
-      <categories>
-          
-          <category> 数据结构 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 数据结构 </tag>
-            
-            <tag> 图 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>数据结构-堆栈</title>
       <link href="/langblogs/posts/14.html"/>
       <url>/langblogs/posts/14.html</url>
@@ -52,6 +25,33 @@
             <tag> 堆 </tag>
             
             <tag> 栈 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>数据结构-图</title>
+      <link href="/langblogs/posts/18.html"/>
+      <url>/langblogs/posts/18.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h1>]]></content>
+      
+      
+      <categories>
+          
+          <category> 数据结构 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 数据结构 </tag>
+            
+            <tag> 图 </tag>
             
         </tags>
       
@@ -114,33 +114,6 @@
     
     
     <entry>
-      <title>数据结构-队列</title>
-      <link href="/langblogs/posts/15.html"/>
-      <url>/langblogs/posts/15.html</url>
-      
-        <content type="html"><![CDATA[<h1 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h1>]]></content>
-      
-      
-      <categories>
-          
-          <category> 数据结构 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 数据结构 </tag>
-            
-            <tag> 队列 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>数据结构-树</title>
       <link href="/langblogs/posts/16.html"/>
       <url>/langblogs/posts/16.html</url>
@@ -160,6 +133,33 @@
             <tag> 数据结构 </tag>
             
             <tag> 树 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>数据结构-队列</title>
+      <link href="/langblogs/posts/15.html"/>
+      <url>/langblogs/posts/15.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h1>]]></content>
+      
+      
+      <categories>
+          
+          <category> 数据结构 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 数据结构 </tag>
+            
+            <tag> 队列 </tag>
             
         </tags>
       
