@@ -4,25 +4,21 @@
   
     
     <entry>
-      <title>数据结构-图</title>
-      <link href="/langblogs/posts/18.html"/>
-      <url>/langblogs/posts/18.html</url>
+      <title>JSONP跨域原理解析</title>
+      <link href="/langblogs/posts/49548.html"/>
+      <url>/langblogs/posts/49548.html</url>
       
-        <content type="html"><![CDATA[<h1 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h1>]]></content>
+        <content type="html"><![CDATA[<h1 id="JSONP跨域原理解析"><a href="#JSONP跨域原理解析" class="headerlink" title="JSONP跨域原理解析"></a>JSONP跨域原理解析</h1><h2 id="产生背景"><a href="#产生背景" class="headerlink" title="产生背景"></a>产生背景</h2><p>由于用户访问安全问题，浏览器规定同源策略，即非同源下的请求都会产生跨越问题，而JSONP就是为了解决这个问题的方式</p><p>同源策略：同一协议，同一域名，同一端口。</p><h2 id="突破同源策略实现跨越"><a href="#突破同源策略实现跨越" class="headerlink" title="突破同源策略实现跨越"></a>突破同源策略实现跨越</h2><p>引导：不管是<code>&lt;script&gt;</code>或是<code>&lt;img&gt;</code>的src，还是<code>&lt;link&gt;</code>的herf都没有被同源策略限制，而src或herf链接的静态资源，本质上来说也是一个get请求。（可以F12看看network下的请求报文）<br>可以从这些标签的herf或src属性没有被同源策略限制，可以得到JSONP的一些实现原理。</p><p>ajax请求受同源策略影响，不允许进行跨域请求，而script标签src属性中的链接却可以访问跨域的js脚本，利用这个特性，服务端不再返回JSON格式的数据，而是返回一段调用某个函数的js代码，在src中进行了调用，这样实现了跨域。</p><h2 id="跨域的实现"><a href="#跨域的实现" class="headerlink" title="跨域的实现"></a>跨域的实现</h2><p>1.下面使用JSONP，将前端代码中的ajax请求去掉，添加了一个script标签，标签的src指向了另一个域<a href="http://www.practice-zhao.com下的remote.js脚本/">www.practice-zhao.com下的remote.js脚本</a></p><pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>GoJSONP<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text/javascript<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript"><span class="token keyword">function</span> <span class="token function">jsonhandle</span><span class="token punctuation">(</span><span class="token parameter">data</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">"age:"</span> <span class="token operator">+</span> data<span class="token punctuation">.</span>age <span class="token operator">+</span> <span class="token string">"name:"</span> <span class="token operator">+</span> data<span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text/javascript<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>jquery-1.8.3.min.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript"></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text/javascript<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>http://www.practice-zhao.com/remote.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>这里调用了跨域的remote.js脚本，remote.js代码如下：</p><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token function">jsonhandle</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">"age"</span> <span class="token operator">:</span> <span class="token number">15</span><span class="token punctuation">,</span><span class="token string">"name"</span><span class="token operator">:</span> <span class="token string">"John"</span><span class="token punctuation">,</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><p>也就是这段远程的js代码执行了上面定义的函数，弹出了提示框</p><p><img src="./medias/detail/load.gif" data-original="https://imgconvert.csdnimg.cn/aHR0cDovL2ltZy5ibG9nLmNzZG4ubmV0LzIwMTYwOTI3MTMwMjQ5Mzkx?x-oss-process=image/format,png"></p><ol start="2"><li>进一步改进</li></ol><pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>GoJSONP<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text/javascript<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript"><span class="token keyword">function</span> <span class="token function">jsonhandle</span><span class="token punctuation">(</span><span class="token parameter">data</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">"age:"</span> <span class="token operator">+</span> data<span class="token punctuation">.</span>age <span class="token operator">+</span> <span class="token string">"name:"</span> <span class="token operator">+</span> data<span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text/javascript<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>jquery-1.8.3.min.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript"></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text/javascript<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript"><span class="token function">$</span><span class="token punctuation">(</span>document<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">ready</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token keyword">var</span> url <span class="token operator">=</span> <span class="token string">"http://www.practice-zhao.com/student.php?id=1&amp;callback=jsonhandle"</span><span class="token punctuation">;</span><span class="token keyword">var</span> obj <span class="token operator">=</span> <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'&lt;script&gt;&lt;\/script&gt;'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>obj<span class="token punctuation">.</span><span class="token function">attr</span><span class="token punctuation">(</span><span class="token string">"src"</span><span class="token punctuation">,</span>url<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"body"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>这里动态的添加了一个script标签，src指向跨域的一个php脚本，并且将上面的js函数名作为callback参数传入，PHP代码</p><pre class="line-numbers language-php" data-language="php"><code class="language-php"><span class="token php language-php"><span class="token delimiter important">&lt;?php</span><span class="token variable">$data</span> <span class="token operator">=</span> <span class="token keyword">array</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'age'</span> <span class="token operator">=&gt;</span> <span class="token number">20</span><span class="token punctuation">,</span><span class="token string single-quoted-string">'name'</span> <span class="token operator">=&gt;</span> <span class="token string single-quoted-string">'张三'</span><span class="token punctuation">,</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token variable">$callback</span> <span class="token operator">=</span> <span class="token variable">$_GET</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'callback'</span><span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token keyword">echo</span> <span class="token variable">$callback</span><span class="token operator">.</span><span class="token string double-quoted-string">"("</span><span class="token operator">.</span><span class="token function">json_encode</span><span class="token punctuation">(</span><span class="token variable">$data</span><span class="token punctuation">)</span><span class="token operator">.</span><span class="token string double-quoted-string">")"</span><span class="token punctuation">;</span><span class="token keyword">return</span><span class="token punctuation">;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>PHP代码返回了一段JS语句，即</p><pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token function">jsonhandle</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">"age"</span> <span class="token operator">:</span> <span class="token number">15</span><span class="token punctuation">,</span><span class="token string">"name"</span><span class="token operator">:</span> <span class="token string">"张三"</span><span class="token punctuation">,</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><p><em>此时访问页面时，动态添加了一个script标签，src指向PHP脚本，执行返回的JS代码，成功弹出提示框。<br>所以JSONP将访问跨域请求变成了执行远程JS代码，服务端不再返回JSON格式的数据，而是返回了一段将JSON数据作为传入参数的函数执行代码。</em></p>]]></content>
       
-      
-      <categories>
-          
-          <category> 数据结构 </category>
-          
-      </categories>
       
       
         <tags>
             
-            <tag> 数据结构 </tag>
+            <tag> 前端 </tag>
             
-            <tag> 图 </tag>
+            <tag> 跨域 </tag>
+            
+            <tag> JSONP </tag>
             
         </tags>
       
@@ -52,6 +48,33 @@
             <tag> 堆 </tag>
             
             <tag> 栈 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>数据结构-图</title>
+      <link href="/langblogs/posts/18.html"/>
+      <url>/langblogs/posts/18.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h1>]]></content>
+      
+      
+      <categories>
+          
+          <category> 数据结构 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 数据结构 </tag>
+            
+            <tag> 图 </tag>
             
         </tags>
       
@@ -114,33 +137,6 @@
     
     
     <entry>
-      <title>数据结构-队列</title>
-      <link href="/langblogs/posts/15.html"/>
-      <url>/langblogs/posts/15.html</url>
-      
-        <content type="html"><![CDATA[<h1 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h1>]]></content>
-      
-      
-      <categories>
-          
-          <category> 数据结构 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 数据结构 </tag>
-            
-            <tag> 队列 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>数据结构-链表</title>
       <link href="/langblogs/posts/13.html"/>
       <url>/langblogs/posts/13.html</url>
@@ -160,6 +156,33 @@
             <tag> 数据结构 </tag>
             
             <tag> 链表 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>数据结构-队列</title>
+      <link href="/langblogs/posts/15.html"/>
+      <url>/langblogs/posts/15.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h1>]]></content>
+      
+      
+      <categories>
+          
+          <category> 数据结构 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 数据结构 </tag>
+            
+            <tag> 队列 </tag>
             
         </tags>
       
