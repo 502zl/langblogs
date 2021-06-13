@@ -8,7 +8,7 @@
       <link href="/langblogs/posts/26.html"/>
       <url>/langblogs/posts/26.html</url>
       
-        <content type="html"><![CDATA[<h2 id="奠定基调"><a href="#奠定基调" class="headerlink" title="奠定基调"></a>奠定基调</h2><ul><li>GET和POST只是HTTP协议两种提交请求的方式，形成两种形式的报文发生在应用层；</li><li>下层用来传输它们的工具(TCP/IP协议族)都是一样的。</li><li>所以两者在本质上是没有区别的，也就是说GET可以变为POST，POST也可以变为GET。</li><li>而两者那几个不是本质上的区别主要因为两者提交请求的方式。</li><li>GET请求只需要提交Request Header，因为可怜的它，<strong>没有Request Body</strong>，所以其要提交数据的话只能跟在URL后面当yiba（也就是尾巴，哈哈哈哈）。</li><li>POST请求需要<strong>提交Request Header 和 Request Body</strong>，而提交的数据一般被放在Request Body内，当然你也可以跟在URL，但是这样它就不是纯粹的POST了哦。</li></ul><h2 id="两者的不同（看一看路人和卷王）"><a href="#两者的不同（看一看路人和卷王）" class="headerlink" title="两者的不同（看一看路人和卷王）"></a>两者的不同（看一看路人和卷王）</h2><ol><li>关于请求参数</li></ol><ul><li><p>传递方式 </p><ul><li><p>路人😄： GET参数通过URL传递，POST参数放在Request Body内；</p></li><li><p>卷王😏:一种规范而已，POST请求我也可以用URL来传递，就是这样任性，不服你打我啊！！！</p></li><li><p>路人<span class="github-emoji"><span>🙉</span><img src="./medias/detail/load.gif" data-original="https://github.githubassets.com/images/icons/emoji/unicode/1f649.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></p></li></ul></li><li><p>参数长度</p><ul><li></li><li><p>卷王😏:一种规范而已，POST请求我也可以用URL来传递，就是这样任性，不服你打我啊！！！</p></li></ul></li></ul>]]></content>
+        <content type="html"><![CDATA[<h2 id="奠定基调"><a href="#奠定基调" class="headerlink" title="奠定基调"></a>奠定基调</h2><ul><li>GET和POST只是HTTP协议两种提交请求的方式，形成两种形式的报文发生在应用层；</li><li>下层用来传输它们的工具(TCP/IP协议族)都是一样的。</li><li>所以两者在广义上是没有区别的，也就是说GET可以变为POST，POST也可以变为GET。</li><li>而两者的区别主要因为两者提交请求的方式。</li><li>GET请求只需要提交Request Header，因为可怜的它，<strong>没有Request Body</strong>，所以其要提交数据的话只能跟在URL后面当yiba（也就是尾巴，哈哈哈哈）。</li><li>POST请求需要<strong>提交Request Header 和 Request Body</strong>，而提交的数据一般被放在Request Body内，当然你也可以跟在URL，但是这样它就不是纯粹的POST了哦。</li></ul><h2 id="两者的不同（看一看路人和卷王）"><a href="#两者的不同（看一看路人和卷王）" class="headerlink" title="两者的不同（看一看路人和卷王）"></a>两者的不同（看一看路人和卷王）</h2><ol><li>关于请求参数</li></ol><ul><li><p>传递方式</p><ul><li><p>路人😄： GET参数通过URL传递，POST参数放在Request Body内；</p></li><li><p>卷王😏：一种规范而已，POST请求我也可以用URL来传递，就是这样任性，不服你打我啊！！！</p></li><li><p>路人🙉：有本事放学别走</p></li></ul></li><li><p>参数长度</p><ul><li><p>路人😄：GET请求在URL传递的参数是有长度限制的，而POST没有。</p></li><li><p>卷王😏：这个长度限制是针对URL的，不是针对参数的，再多说几句，HTTP协议并没有限制URL的长度，这个限制来自于浏览器和服务器，而不用的浏览器和服务器标准都不一样哦。</p></li><li><p>路人🙉：有本事放学别走</p></li></ul></li><li><p>安全性</p><ul><li><p>路人😄：POST比GET安全，因为GET传递的参数直接暴露在URL中，所以不能用来传递敏感信息。</p></li><li><p>卷王😏：这个安全只是相对数据会不会被直接暴露，而不是广义上的安全（比如数据会不会被修改什么的）</p></li><li><p>路人🙉：我不要面子的？</p></li></ul></li><li><p>编码：</p><ul><li><p>路人😄：GET请求参数只能URL编码，而POST支持多种编码方式</p></li><li><p>卷王😏：这不是废话吗，GET的参数跟在URL大哥后面，资源跟着大哥姓，才能保证自己不会在社会（万维网）中被锤得连它妈都不认不了，而POST的参数被保护在Body内，外界对他的影响不大，他要相对自由的得多。</p></li><li><p>路人🙉：大哥，不带这么欺负人的，给个面子啊。</p></li></ul></li></ul><ol><li>缓存和收藏书签（HTTP缓存只使用于不更新服务端数据的请求）</li></ol><ul><li><p>缓存</p><ul><li><p>路人😄：GET请求能被浏览器缓存，而POST不能</p></li><li><p>卷王😏：你家浏览器能缓存Request Body？（浏览器缓存机制，能缓存URL，但不能缓存Request Body。）</p></li><li><p>路人🙉：你。。。你说的都对！</p></li></ul></li><li><p>收藏书签</p><ul><li><p>路人😄：GET请求参数能被完整地保留在浏览器浏览历史里面，而POST中的不能被保留。</p></li><li><p>卷王😏：想一下我刚才说的话，有没有恍然大悟？没有？<span class="github-emoji"><span>👋</span><img src="./medias/detail/load.gif" data-original="https://github.githubassets.com/images/icons/emoji/unicode/1f44b.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>，GET的URL能被保存，POST的request Body不能被保存，那怎么保留？保留个空气啊。</p></li><li><p>路人😖：大哥，我说的也没错啊</p></li></ul></li></ul><ol><li><p>传输过程的差异  </p><ul><li><p>路人😄：GET和POST本质都是TCP连接的，并无差别，但由于浏览器/服务器的的限制，导致他们在应用过程中表现出一些不同。（比如URL长度）</p></li><li><p>卷王😏：也就这句像个事。</p></li></ul></li></ol><ul><li><p>路人😄：嘿嘿嘿</p></li><li><p>说说数据包吧</p><ul><li><p>路人😄：GET产生一个TCP数据包，POST产生两个TCP数据包</p></li><li><p>卷王😏：怎么又来这种不清不楚的，发送POST请求时，在真正发送数据之前，先将请求头发送给服务器端确认，然后再发送数据。给你细说一下吧，GET请求在客户端建立TCP第三次握手时，就连着将自己的全部（Request Header） 一起发送给了服务器端。但POST请求不行，因为发了Request Header，自己还有Request Body呢，所以需要第二个TCP来传递。</p></li><li><p>路人😄：悟了悟了，大佬</p></li></ul></li></ul>]]></content>
       
       
       <categories>
@@ -141,6 +141,33 @@
     
     
     <entry>
+      <title>数据结构-图</title>
+      <link href="/langblogs/posts/18.html"/>
+      <url>/langblogs/posts/18.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h1>]]></content>
+      
+      
+      <categories>
+          
+          <category> 数据结构 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 数据结构 </tag>
+            
+            <tag> 图 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>数据结构-堆栈</title>
       <link href="/langblogs/posts/14.html"/>
       <url>/langblogs/posts/14.html</url>
@@ -162,33 +189,6 @@
             <tag> 堆 </tag>
             
             <tag> 栈 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>数据结构-图</title>
-      <link href="/langblogs/posts/18.html"/>
-      <url>/langblogs/posts/18.html</url>
-      
-        <content type="html"><![CDATA[<h1 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h1>]]></content>
-      
-      
-      <categories>
-          
-          <category> 数据结构 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 数据结构 </tag>
-            
-            <tag> 图 </tag>
             
         </tags>
       
@@ -251,33 +251,6 @@
     
     
     <entry>
-      <title>数据结构-队列</title>
-      <link href="/langblogs/posts/15.html"/>
-      <url>/langblogs/posts/15.html</url>
-      
-        <content type="html"><![CDATA[<h1 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h1>]]></content>
-      
-      
-      <categories>
-          
-          <category> 数据结构 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 数据结构 </tag>
-            
-            <tag> 队列 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>数据结构-树</title>
       <link href="/langblogs/posts/16.html"/>
       <url>/langblogs/posts/16.html</url>
@@ -297,6 +270,33 @@
             <tag> 数据结构 </tag>
             
             <tag> 树 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>数据结构-队列</title>
+      <link href="/langblogs/posts/15.html"/>
+      <url>/langblogs/posts/15.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h1>]]></content>
+      
+      
+      <categories>
+          
+          <category> 数据结构 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 数据结构 </tag>
+            
+            <tag> 队列 </tag>
             
         </tags>
       
