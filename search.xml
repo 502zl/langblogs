@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>浅谈 POST和GET</title>
+      <link href="/langblogs/posts/26.html"/>
+      <url>/langblogs/posts/26.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="奠定基调"><a href="#奠定基调" class="headerlink" title="奠定基调"></a>奠定基调</h2><ul><li>GET和POST只是HTTP协议两种提交请求的方式，形成两种形式的报文发生在应用层；</li><li>下层用来传输它们的工具(TCP/IP协议族)都是一样的。</li><li>所以两者在本质上是没有区别的，也就是说GET可以变为POST，POST也可以变为GET。</li><li>而两者那几个不是本质上的区别主要因为两者提交请求的方式。</li><li>GET请求只需要提交Request Header，因为可怜的它，<strong>没有Request Body</strong>，所以其要提交数据的话只能跟在URL后面当yiba（也就是尾巴，哈哈哈哈）。</li><li>POST请求需要<strong>提交Request Header 和 Request Body</strong>，而提交的数据一般被放在Request Body内，当然你也可以跟在URL，但是这样它就不是纯粹的POST了哦。</li></ul><h2 id="两者的不同（看一看路人和卷王）"><a href="#两者的不同（看一看路人和卷王）" class="headerlink" title="两者的不同（看一看路人和卷王）"></a>两者的不同（看一看路人和卷王）</h2><ol><li>关于请求参数</li></ol><ul><li><p>传递方式 </p><ul><li><p>路人😄： GET参数通过URL传递，POST参数放在Request Body内；</p></li><li><p>卷王😏:一种规范而已，POST请求我也可以用URL来传递，就是这样任性，不服你打我啊！！！</p></li><li><p>路人<span class="github-emoji"><span>🙉</span><img src="./medias/detail/load.gif" data-original="https://github.githubassets.com/images/icons/emoji/unicode/1f649.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></p></li></ul></li><li><p>参数长度</p><ul><li></li><li><p>卷王😏:一种规范而已，POST请求我也可以用URL来传递，就是这样任性，不服你打我啊！！！</p></li></ul></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 计算机网络 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> HTTP </tag>
+            
+            <tag> 计算机网络 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>JSONP跨域原理解析</title>
       <link href="/langblogs/posts/49548.html"/>
       <url>/langblogs/posts/49548.html</url>
@@ -33,11 +60,11 @@
     
     
     <entry>
-      <title>HTTP常见请求头</title>
-      <link href="/langblogs/posts/25.html"/>
-      <url>/langblogs/posts/25.html</url>
+      <title>HTTP常见状态码</title>
+      <link href="/langblogs/posts/24.html"/>
+      <url>/langblogs/posts/24.html</url>
       
-        <content type="html"><![CDATA[<h1 id="HTTP报文结构"><a href="#HTTP报文结构" class="headerlink" title="HTTP报文结构"></a>HTTP报文结构</h1><p>HTTP协议请求响应报文中必定包含HTTP首部，首部内容为客户端和服务器分别处理请求和相应提供所需要的信息。</p><h2 id="HTTP请求报文"><a href="#HTTP请求报文" class="headerlink" title="HTTP请求报文"></a>HTTP请求报文</h2><p><img src="./medias/detail/load.gif" data-original="https://i.loli.net/2021/06/13/SWvfHkMcIqA52b6.png" alt="image.png"><br>（图片来自于《图解HTTP》）</p><h2 id="HTTP-常见请求头"><a href="#HTTP-常见请求头" class="headerlink" title="HTTP 常见请求头"></a>HTTP 常见请求头</h2><table><thead><tr><th>协议头</th><th>描述</th></tr></thead><tbody><tr><td>Accept</td><td>可接受的响应内容类型（Conten-Types）</td></tr><tr><td>Cache-Control</td><td>用来指定当前的请求或响应中，是否使用缓存机制</td></tr><tr><td>Connection</td><td>客户端想要优先使用的连接类型</td></tr><tr><td>Cookie</td><td>由之前服务器通过Set-Cookie设置</td></tr><tr><td>Content-Length</td><td>以8进制表示的请求体长度</td></tr><tr><td>Date</td><td>发送该消息的日期</td></tr><tr><td>Expect</td><td>客户端希望浏览器做出特定的行为</td></tr><tr><td>Host</td><td>表示服务器域名 + 服务器所监听的端口号</td></tr><tr><td>origin</td><td>发起一个针对跨域资源共享的请求（该请求需要服务器在响应报文中加入<code>Access-Control-Allow-Origin</code>的消息头，表示访问控制所允许的来源</td></tr><tr><td>Authorization</td><td>用于表示HTTP协议中需要认证资源的认证信息</td></tr><tr><td>Proxy-Authorization</td><td>用于向代理认证的认证消息</td></tr><tr><td>Range</td><td>表示请求报文某个实体的一部分，直接偏移量以0开始</td></tr><tr><td>User-Agent</td><td>客户端的身份标识符</td></tr><tr><td>Upgrade</td><td>要求服务器升级到一个高版本的协议</td></tr><tr><td>via</td><td>告诉服务器这个请求是由哪些代理服务器发出的</td></tr><tr><td>If-Match</td><td>仅当客户端提供的实体与服务器端对应的实体相匹配上，才进行相应的操作</td></tr></tbody></table>]]></content>
+        <content type="html"><![CDATA[<h3 id="大纲"><a href="#大纲" class="headerlink" title="大纲"></a>大纲</h3><table><thead><tr><th>状态码</th><th>解释</th></tr></thead><tbody><tr><td>2-xx</td><td>请求成功</td></tr><tr><td>3-xx</td><td>请求资源被重定向</td></tr><tr><td>4-xx</td><td>客户端请求错误</td></tr><tr><td>5-xx</td><td>服务器错误</td></tr></tbody></table><h3 id="常见状态码"><a href="#常见状态码" class="headerlink" title="常见状态码"></a>常见状态码</h3><ol><li><strong>2-xx</strong>（请求成功）</li></ol><p><strong>200</strong>：资源请求成功；<br><strong>204</strong>：无内容。服务器处理请求成功，为返回内容。在未更新网页的情况下，可确保浏览器继续显示当前文档；</p><ol start="2"><li><strong>3-xx</strong>（重定向）</li></ol><p><strong>300</strong>：多种选择，请求的资源科包括多个位置，相应返回一个资源特征与地址的列表提供给客户端选择；<br><strong>301</strong>：永久移动，返回信息中会携带新的URL，浏览器会自动定向到新的URL，以后的请求都会使用新的URL；<br><strong>302</strong>：临时移动，资源只是被临时移动，<em>本次请求使用新的URL，以后的请求仍然使用原URL访问</em>：<br><strong>303</strong>：查看其它地址，资源被永久移动，但得使用GET或POST请求查看；<br><strong>304</strong>：未修改，当客户端在请求附加条件时，若满足条件时，返回修改后的资源，否则只返回304，不携带资源；<br><strong>307</strong>：临时重定向，与302相似，但<em>需要使用GET请求重定向</em>；</p><ol start="3"><li><strong>4-xx</strong>（客户端请求错误）</li></ol><p><strong>400</strong>：客户端请求的语法错误，服务器无法理解；<br><strong>401</strong>：当前请求需要用户认证；<br><strong>403</strong>：服务器接收了请求，但是拒绝执行请求；<br><strong>404</strong>：无法找到请求资源；</p><ol start="4"><li><strong>5-xx</strong>（服务器错误)</li></ol><p><strong>500</strong>：服务器内部错误（执行请求时发生错误、Web应用程序报错、其他临时错误等）；<br><strong>502</strong>：作为网关或者代理服务器尝试执行求情时，从远处服务器接收到一个无效的响应；<br><strong>503</strong>：服务器宕机（超载、停机更新维护）；<br><strong>505</strong>：服务器不支持请求的HTTP协议，无法处理：</p>]]></content>
       
       
       <categories>
@@ -60,11 +87,11 @@
     
     
     <entry>
-      <title>HTTP常见状态码</title>
-      <link href="/langblogs/posts/24.html"/>
-      <url>/langblogs/posts/24.html</url>
+      <title>HTTP常见请求头</title>
+      <link href="/langblogs/posts/25.html"/>
+      <url>/langblogs/posts/25.html</url>
       
-        <content type="html"><![CDATA[<h3 id="大纲"><a href="#大纲" class="headerlink" title="大纲"></a>大纲</h3><table><thead><tr><th>状态码</th><th>解释</th></tr></thead><tbody><tr><td>2-xx</td><td>请求成功</td></tr><tr><td>3-xx</td><td>请求资源被重定向</td></tr><tr><td>4-xx</td><td>客户端请求错误</td></tr><tr><td>5-xx</td><td>服务器错误</td></tr></tbody></table><h3 id="常见状态码"><a href="#常见状态码" class="headerlink" title="常见状态码"></a>常见状态码</h3><ol><li><strong>2-xx</strong>（请求成功）</li></ol><p><strong>200</strong>：资源请求成功；<br><strong>204</strong>：无内容。服务器处理请求成功，为返回内容。在未更新网页的情况下，可确保浏览器继续显示当前文档；</p><ol start="2"><li><strong>3-xx</strong>（重定向）</li></ol><p><strong>300</strong>：多种选择，请求的资源科包括多个位置，相应返回一个资源特征与地址的列表提供给客户端选择；<br><strong>301</strong>：永久移动，返回信息中会携带新的URL，浏览器会自动定向到新的URL，以后的请求都会使用新的URL；<br><strong>302</strong>：临时移动，资源只是被临时移动，<em>本次请求使用新的URL，以后的请求仍然使用原URL访问</em>：<br><strong>303</strong>：查看其它地址，资源被永久移动，但得使用GET或POST请求查看；<br><strong>304</strong>：未修改，当客户端在请求附加条件时，若满足条件时，返回修改后的资源，否则只返回304，不携带资源；<br><strong>307</strong>：临时重定向，与302相似，但<em>需要使用GET请求重定向</em>；</p><ol start="3"><li><strong>4-xx</strong>（客户端请求错误）</li></ol><p><strong>400</strong>：客户端请求的语法错误，服务器无法理解；<br><strong>401</strong>：当前请求需要用户认证；<br><strong>403</strong>：服务器接收了请求，但是拒绝执行请求；<br><strong>404</strong>：无法找到请求资源；</p><ol start="4"><li><strong>5-xx</strong>（服务器错误)</li></ol><p><strong>500</strong>：服务器内部错误（执行请求时发生错误、Web应用程序报错、其他临时错误等）；<br><strong>502</strong>：作为网关或者代理服务器尝试执行求情时，从远处服务器接收到一个无效的响应；<br><strong>503</strong>：服务器宕机（超载、停机更新维护）；<br><strong>505</strong>：服务器不支持请求的HTTP协议，无法处理：</p>]]></content>
+        <content type="html"><![CDATA[<h1 id="HTTP报文结构"><a href="#HTTP报文结构" class="headerlink" title="HTTP报文结构"></a>HTTP报文结构</h1><p>HTTP协议请求响应报文中必定包含HTTP首部，首部内容为客户端和服务器分别处理请求和相应提供所需要的信息。</p><h2 id="HTTP请求报文"><a href="#HTTP请求报文" class="headerlink" title="HTTP请求报文"></a>HTTP请求报文</h2><p><img src="./medias/detail/load.gif" data-original="https://i.loli.net/2021/06/13/SWvfHkMcIqA52b6.png" alt="image.png"><br>（图片来自于《图解HTTP》）</p><h2 id="HTTP-常见请求头"><a href="#HTTP-常见请求头" class="headerlink" title="HTTP 常见请求头"></a>HTTP 常见请求头</h2><table><thead><tr><th>协议头</th><th>描述</th></tr></thead><tbody><tr><td>Accept</td><td>可接受的响应内容类型（Conten-Types）</td></tr><tr><td>Cache-Control</td><td>用来指定当前的请求或响应中，是否使用缓存机制</td></tr><tr><td>Connection</td><td>客户端想要优先使用的连接类型</td></tr><tr><td>Cookie</td><td>由之前服务器通过Set-Cookie设置</td></tr><tr><td>Content-Length</td><td>以8进制表示的请求体长度</td></tr><tr><td>Date</td><td>发送该消息的日期</td></tr><tr><td>Expect</td><td>客户端希望浏览器做出特定的行为</td></tr><tr><td>Host</td><td>表示服务器域名 + 服务器所监听的端口号</td></tr><tr><td>origin</td><td>发起一个针对跨域资源共享的请求（该请求需要服务器在响应报文中加入<code>Access-Control-Allow-Origin</code>的消息头，表示访问控制所允许的来源</td></tr><tr><td>Authorization</td><td>用于表示HTTP协议中需要认证资源的认证信息</td></tr><tr><td>Proxy-Authorization</td><td>用于向代理认证的认证消息</td></tr><tr><td>Range</td><td>表示请求报文某个实体的一部分，直接偏移量以0开始</td></tr><tr><td>User-Agent</td><td>客户端的身份标识符</td></tr><tr><td>Upgrade</td><td>要求服务器升级到一个高版本的协议</td></tr><tr><td>via</td><td>告诉服务器这个请求是由哪些代理服务器发出的</td></tr><tr><td>If-Match</td><td>仅当客户端提供的实体与服务器端对应的实体相匹配上，才进行相应的操作</td></tr></tbody></table>]]></content>
       
       
       <categories>
@@ -114,33 +141,6 @@
     
     
     <entry>
-      <title>数据结构-图</title>
-      <link href="/langblogs/posts/18.html"/>
-      <url>/langblogs/posts/18.html</url>
-      
-        <content type="html"><![CDATA[<h1 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h1>]]></content>
-      
-      
-      <categories>
-          
-          <category> 数据结构 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 数据结构 </tag>
-            
-            <tag> 图 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>数据结构-堆栈</title>
       <link href="/langblogs/posts/14.html"/>
       <url>/langblogs/posts/14.html</url>
@@ -170,6 +170,33 @@
     
     
     <entry>
+      <title>数据结构-图</title>
+      <link href="/langblogs/posts/18.html"/>
+      <url>/langblogs/posts/18.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h1>]]></content>
+      
+      
+      <categories>
+          
+          <category> 数据结构 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 数据结构 </tag>
+            
+            <tag> 图 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>数据结构-散列表</title>
       <link href="/langblogs/posts/17.html"/>
       <url>/langblogs/posts/17.html</url>
@@ -189,33 +216,6 @@
             <tag> 数据结构 </tag>
             
             <tag> 散列表 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>数据结构-树</title>
-      <link href="/langblogs/posts/16.html"/>
-      <url>/langblogs/posts/16.html</url>
-      
-        <content type="html"><![CDATA[<h1 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h1>]]></content>
-      
-      
-      <categories>
-          
-          <category> 数据结构 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 数据结构 </tag>
-            
-            <tag> 树 </tag>
             
         </tags>
       
@@ -270,6 +270,33 @@
             <tag> 数据结构 </tag>
             
             <tag> 队列 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>数据结构-树</title>
+      <link href="/langblogs/posts/16.html"/>
+      <url>/langblogs/posts/16.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h1>]]></content>
+      
+      
+      <categories>
+          
+          <category> 数据结构 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 数据结构 </tag>
+            
+            <tag> 树 </tag>
             
         </tags>
       
