@@ -8,7 +8,7 @@
       <link href="/langblogs/posts/35375.html"/>
       <url>/langblogs/posts/35375.html</url>
       
-        <content type="html"><![CDATA[<h2 id="引入背景"><a href="#引入背景" class="headerlink" title="引入背景"></a>引入背景</h2><p>防抖和节流是针对响应跟不上触发频率这类问题的两种解决方案。 在给 DOM 绑定事件时，有些事件我们是无法控制触发频率的。 如鼠标移动事件 onmousemove, 滚动滚动条事件 onscroll，窗口大小改变事件 onresize，瞬间的操作都会导致这些事件会被高频触发。 如果事件的回调函数较为复杂，就会导致响应跟不上触发，出现页面卡顿，假死现象。 在实时检查输入时，如果我们绑定 onkeyup 事件发请求去服务端检查，用户输入过程中，事件的触发频率也会很高，会导致大量的请求发出，响应速度会大大跟不上触发。<br>针对此类快速连续触发和不可控的高频触发问题，debounce 和 throttling 给出了两种解决策略</p><h2 id="防抖（debounce"><a href="#防抖（debounce" class="headerlink" title="防抖（debounce)"></a>防抖（debounce)</h2><p>高频率触发的事件，在指定的单位时间内，只响应最后一次，如果在指定的时间在触发，则重新计算时间(后面触发的事件执行，替代了前面的事件)<br>总结：<em>一定时间内，只执行最后一次</em><br>特点：<em>如果事件在规定的时间间隔内被不断的触发，则调用方法会被不断的延迟</em></p><p>应用：</p><ol><li>search搜索联想，用户在不断输入值时，用防抖来节约请求资源。</li><li>验证用户输入是否规范时，使用防抖来减少验证方法的多次触发</li><li>window触发resize的时候，不断的调整浏览器窗口大小会不断的触发这个事件，用防抖来让其只触发一次</li></ol><p>函数封装：</p><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// callback 为定时器时间到了，需要执行的回调</span><span class="token keyword">function</span> <span class="token function">debounce</span><span class="token punctuation">(</span><span class="token parameter">callback<span class="token punctuation">,</span> delay</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>  <span class="token keyword">let</span> timer <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>  <span class="token keyword">return</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>    <span class="token function">clearTimeout</span><span class="token punctuation">(</span>timer<span class="token punctuation">)</span><span class="token punctuation">;</span>    timer <span class="token operator">=</span> <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>      <span class="token function">callback</span><span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span> arguments<span class="token punctuation">)</span>    <span class="token punctuation">}</span><span class="token punctuation">,</span> delay<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token keyword">let</span> debounceFn <span class="token operator">=</span> <span class="token function">debounce</span><span class="token punctuation">(</span>callback<span class="token punctuation">,</span> delay<span class="token punctuation">)</span><span class="token punctuation">;</span> <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="节流-throttling"><a href="#节流-throttling" class="headerlink" title="节流(throttling)"></a>节流(throttling)</h2><p>高频率触发的事件,在指定的单位时间内，只响应第一次(前面触发的执行前，忽略后面的事件)<br>总结：<em>一定时间内，只执行一次</em><br>特点：<em>会稀释函数的执行频率</em></p><p>应用：</p><ol><li>鼠标不断点击触发，mousedown(单位时间内只触发一次)</li><li>监听滚动事件，比如是否滑到底部自动加载更多，用throttle来判断</li></ol><p>函数封装</p><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">throttling</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>  <span class="token comment">// 使用标记为</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>]]></content>
+        <content type="html"><![CDATA[<h2 id="引入背景"><a href="#引入背景" class="headerlink" title="引入背景"></a>引入背景</h2><p>防抖和节流是针对响应跟不上触发频率这类问题的两种解决方案。 在给 DOM 绑定事件时，有些事件我们是无法控制触发频率的。 如鼠标移动事件 onmousemove, 滚动滚动条事件 onscroll，窗口大小改变事件 onresize，瞬间的操作都会导致这些事件会被高频触发。 如果事件的回调函数较为复杂，就会导致响应跟不上触发，出现页面卡顿，假死现象。 在实时检查输入时，如果我们绑定 onkeyup 事件发请求去服务端检查，用户输入过程中，事件的触发频率也会很高，会导致大量的请求发出，响应速度会大大跟不上触发。<br>针对此类快速连续触发和不可控的高频触发问题，debounce 和 throttling 给出了两种解决策略</p><h2 id="防抖（debounce"><a href="#防抖（debounce" class="headerlink" title="防抖（debounce)"></a>防抖（debounce)</h2><p>高频率触发的事件，在指定的单位时间内，只响应最后一次，如果在指定的时间在触发，则重新计算时间(后面触发的事件执行，替代了前面的事件)<br>总结：<em>一定时间内，只执行最后一次</em><br>特点：<em>如果事件在规定的时间间隔内被不断的触发，则调用方法会被不断的延迟</em></p><p>应用：</p><ol><li>search搜索联想，用户在不断输入值时，用防抖来节约请求资源。</li><li>验证用户输入是否规范时，使用防抖来减少验证方法的多次触发</li><li>window触发resize的时候，不断的调整浏览器窗口大小会不断的触发这个事件，用防抖来让其只触发一次</li></ol><p>函数封装：</p><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// callback 为定时器时间到了，需要执行的回调</span><span class="token keyword">function</span> <span class="token function">debounce</span><span class="token punctuation">(</span><span class="token parameter">callback<span class="token punctuation">,</span> delay</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>  <span class="token keyword">let</span> timer <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>  <span class="token keyword">return</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>    <span class="token function">clearTimeout</span><span class="token punctuation">(</span>timer<span class="token punctuation">)</span><span class="token punctuation">;</span>    timer <span class="token operator">=</span> <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>      <span class="token function">callback</span><span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span> arguments<span class="token punctuation">)</span>    <span class="token punctuation">}</span><span class="token punctuation">,</span> delay<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token keyword">let</span> debounceFn <span class="token operator">=</span> <span class="token function">debounce</span><span class="token punctuation">(</span>callback<span class="token punctuation">,</span> delay<span class="token punctuation">)</span><span class="token punctuation">;</span> <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="节流-throttling"><a href="#节流-throttling" class="headerlink" title="节流(throttling)"></a>节流(throttling)</h2><p>高频率触发的事件,在指定的单位时间内，只响应第一次(前面触发的执行前，忽略后面的事件)<br>总结：<em>一定时间内，只执行一次</em><br>特点：<em>会稀释函数的执行频率</em></p><p>应用：</p><ol><li>鼠标不断点击触发，mousedown(单位时间内只触发一次)</li><li>监听滚动事件，比如是否滑到底部自动加载更多，用throttle来判断</li></ol><p>函数封装</p><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">throttling</span><span class="token punctuation">(</span><span class="token parameter">callback<span class="token punctuation">,</span> delay</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>  <span class="token comment">// 记录是否已经开始计时</span>  <span class="token keyword">let</span> timer<span class="token punctuation">;</span>  <span class="token keyword">return</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>    <span class="token keyword">if</span><span class="token punctuation">(</span>timer<span class="token punctuation">)</span> <span class="token keyword">return</span><span class="token punctuation">;</span>    timer <span class="token operator">=</span> <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span><span class="token punctuation">{</span>      <span class="token function">callback</span><span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span> arguments<span class="token punctuation">)</span>      <span class="token function">clearTimeout</span><span class="token punctuation">(</span>timer<span class="token punctuation">)</span>    <span class="token punctuation">}</span><span class="token punctuation">,</span> delay<span class="token punctuation">)</span>  <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token keyword">let</span> throttlingFn <span class="token operator">=</span> <span class="token function">throttling</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
       
       
       
@@ -47,6 +47,33 @@
       <url>/langblogs/posts/38332.html</url>
       
         <content type="html"><![CDATA[<h1 id="JavaScript-数组采坑"><a href="#JavaScript-数组采坑" class="headerlink" title="JavaScript 数组采坑"></a>JavaScript 数组采坑</h1><h2 id="长度"><a href="#长度" class="headerlink" title="长度"></a>长度</h2><p>准确的说，JS 数组长度不是里面包含了多少个元素，为数组中元素最大索引加一</p><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">const</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>arr<span class="token punctuation">[</span><span class="token number">20</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>arr<span class="token punctuation">.</span>length<span class="token punctuation">)</span> <span class="token comment">// log: 21</span>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>arr<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token comment">// log: undefine</span><span class="token comment">// 可使用 数组的length属性去清空元素</span><span class="token keyword">let</span> arr1 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token comment">// 保留四个元素</span>arr1<span class="token punctuation">.</span>length <span class="token operator">=</span> <span class="token number">4</span><span class="token punctuation">;</span>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>arr1<span class="token punctuation">)</span> <span class="token comment">// log: [ 1, 2, 3, 4 ]</span><span class="token comment">// 清空数组</span>arr1<span class="token punctuation">.</span>length <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>arr1<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// log: []</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="遍历"><a href="#遍历" class="headerlink" title="遍历"></a>遍历</h3><p>使用 for…in 和 forEach() 遍历都会跳过空元素（undefined）<br>使用 for…of 和 for 遍历，依然会遍历空元素</p><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">let</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">;</span>arr<span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span><span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> arr<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token punctuation">}</span><span class="token comment">// log: 1 2 undefined undefined undefine 10</span><span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">let</span> site <span class="token keyword">of</span> arr<span class="token punctuation">)</span> <span class="token punctuation">{</span>  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>site<span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token comment">// log: 1 2 undefined undefined undefined 10</span><span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">let</span> key <span class="token keyword">in</span> arr<span class="token punctuation">)</span> <span class="token punctuation">{</span>  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>arr<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token comment">// log: 1 2 5</span>arr<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token parameter">value</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token comment">// log: 1 2 5</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="关于数组的计算属性"><a href="#关于数组的计算属性" class="headerlink" title="关于数组的计算属性"></a>关于数组的计算属性</h2><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">const</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>arr<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>arr<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>arr<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span><span class="token comment">// 数组计算属性的用法</span>arr<span class="token punctuation">[</span><span class="token string">"property"</span> <span class="token operator">+</span> <span class="token string">"1"</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">"数组的计算属性"</span><span class="token punctuation">;</span><span class="token comment">// 可以通过属性名得到数组值</span>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>arr<span class="token punctuation">.</span>property1<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// log：数组的计算属性</span><span class="token comment">// 当你给你的数组加了一个计算属性后，再用for...in 来遍历数组</span><span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">let</span> index <span class="token keyword">in</span> arr<span class="token punctuation">)</span> <span class="token punctuation">{</span>  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>arr<span class="token punctuation">[</span>index<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token comment">// log： 0 1 2 3 数组的计算属性</span><span class="token comment">// 再看看数组的长度</span>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>arr<span class="token punctuation">.</span>length<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// log: 3</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="不要使用-去判断数组相等，或判断否空数组"><a href="#不要使用-去判断数组相等，或判断否空数组" class="headerlink" title="不要使用 === 去判断数组相等，或判断否空数组"></a>不要使用 <code>===</code> 去判断数组相等，或判断否空数组</h2><p>记住，数组也是对象</p><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">const</span> arr<span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token comment">// 全等时</span>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>arr <span class="token operator">===</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// log: false</span>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>arr <span class="token operator">===</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// log: false</span>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">===</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token comment">// log: false</span><span class="token comment">// 使用相等时</span>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>arr <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token comment">// log: true </span>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>arr <span class="token operator">==</span> <span class="token string">''</span><span class="token punctuation">)</span> <span class="token comment">// log: true </span>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>arr <span class="token operator">==</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token comment">// log: false</span>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>arr <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token comment">// log: false</span>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token comment">// log: false</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> javascript </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 前端 </tag>
+            
+            <tag> JavaScript </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Javascript 原型及原型链</title>
+      <link href="/langblogs/posts/38332.html"/>
+      <url>/langblogs/posts/38332.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
       
       
       <categories>
@@ -206,33 +233,6 @@
     
     
     <entry>
-      <title>数据结构-图</title>
-      <link href="/langblogs/posts/18.html"/>
-      <url>/langblogs/posts/18.html</url>
-      
-        <content type="html"><![CDATA[<h1 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h1>]]></content>
-      
-      
-      <categories>
-          
-          <category> 数据结构 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 数据结构 </tag>
-            
-            <tag> 图 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>数据结构-堆栈</title>
       <link href="/langblogs/posts/14.html"/>
       <url>/langblogs/posts/14.html</url>
@@ -262,11 +262,11 @@
     
     
     <entry>
-      <title>数据结构-链表</title>
-      <link href="/langblogs/posts/13.html"/>
-      <url>/langblogs/posts/13.html</url>
+      <title>数据结构-图</title>
+      <link href="/langblogs/posts/18.html"/>
+      <url>/langblogs/posts/18.html</url>
       
-        <content type="html"><![CDATA[<h1 id="数据结构-链表"><a href="#数据结构-链表" class="headerlink" title="数据结构-链表"></a>数据结构-链表</h1>]]></content>
+        <content type="html"><![CDATA[<h1 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h1>]]></content>
       
       
       <categories>
@@ -280,7 +280,7 @@
             
             <tag> 数据结构 </tag>
             
-            <tag> 链表 </tag>
+            <tag> 图 </tag>
             
         </tags>
       
@@ -308,6 +308,33 @@
             <tag> 数据结构 </tag>
             
             <tag> 散列表 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>数据结构-链表</title>
+      <link href="/langblogs/posts/13.html"/>
+      <url>/langblogs/posts/13.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="数据结构-链表"><a href="#数据结构-链表" class="headerlink" title="数据结构-链表"></a>数据结构-链表</h1>]]></content>
+      
+      
+      <categories>
+          
+          <category> 数据结构 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 数据结构 </tag>
+            
+            <tag> 链表 </tag>
             
         </tags>
       
@@ -546,9 +573,9 @@
       
         <tags>
             
-            <tag> 请相信生活 </tag>
-            
             <tag> 随笔 </tag>
+            
+            <tag> 请相信生活 </tag>
             
         </tags>
       
@@ -638,7 +665,7 @@
     
     
     <entry>
-      <title>知识点</title>
+      <title>HTML知识点</title>
       <link href="/langblogs/posts/5.html"/>
       <url>/langblogs/posts/5.html</url>
       
@@ -762,9 +789,9 @@
       
         <tags>
             
-            <tag> 工具 </tag>
-            
             <tag> 请相信生活 </tag>
+            
+            <tag> 工具 </tag>
             
         </tags>
       
