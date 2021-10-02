@@ -2,16 +2,58 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://502zl.github.io/langblogs/posts/37129.html</loc>
+    <loc>https://502zl.github.io/langblogs/posts/6.html</loc>
     
-    <lastmod>2021-09-12</lastmod>
+    <lastmod>2021-10-02</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://502zl.github.io/langblogs/posts/8.html</loc>
+    
+    <lastmod>2021-10-02</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://502zl.github.io/langblogs/posts/18.html</loc>
+    
+    <lastmod>2021-10-02</lastmod>
     
   </url>
   
   <url>
     <loc>https://502zl.github.io/langblogs/posts/56330.html</loc>
     
-    <lastmod>2021-09-11</lastmod>
+    <lastmod>2021-10-02</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://502zl.github.io/langblogs/posts/59.html</loc>
+    
+    <lastmod>2021-10-02</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://502zl.github.io/langblogs/posts/23.html</loc>
+    
+    <lastmod>2021-09-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://502zl.github.io/langblogs/posts/31157.html</loc>
+    
+    <lastmod>2021-09-17</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://502zl.github.io/langblogs/posts/37129.html</loc>
+    
+    <lastmod>2021-09-12</lastmod>
     
   </url>
   
@@ -51,13 +93,6 @@
   </url>
   
   <url>
-    <loc>https://502zl.github.io/langblogs/posts/59.html</loc>
-    
-    <lastmod>2021-08-23</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://502zl.github.io/langblogs/posts/20.html</loc>
     
     <lastmod>2021-08-23</lastmod>
@@ -80,13 +115,6 @@
   
   <url>
     <loc>https://502zl.github.io/langblogs/posts/15.html</loc>
-    
-    <lastmod>2021-08-23</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://502zl.github.io/langblogs/posts/18.html</loc>
     
     <lastmod>2021-08-23</lastmod>
     
@@ -142,21 +170,7 @@
   </url>
   
   <url>
-    <loc>https://502zl.github.io/langblogs/posts/8.html</loc>
-    
-    <lastmod>2021-08-19</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://502zl.github.io/langblogs/posts/7.html</loc>
-    
-    <lastmod>2021-08-19</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://502zl.github.io/langblogs/posts/6.html</loc>
     
     <lastmod>2021-08-19</lastmod>
     
@@ -171,13 +185,6 @@
   
   <url>
     <loc>https://502zl.github.io/langblogs/posts/5.html</loc>
-    
-    <lastmod>2021-08-19</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://502zl.github.io/langblogs/posts/23.html</loc>
     
     <lastmod>2021-08-19</lastmod>
     
@@ -275,6 +282,13 @@
   </url>
   
   <url>
+    <loc>https://502zl.github.io/langblogs/contact/index.html</loc>
+    
+    <lastmod>2021-04-15</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://502zl.github.io/langblogs/categories/index.html</loc>
     
     <lastmod>2021-04-15</lastmod>
@@ -282,7 +296,7 @@
   </url>
   
   <url>
-    <loc>https://502zl.github.io/langblogs/contact/index.html</loc>
+    <loc>https://502zl.github.io/langblogs/journal/index.html</loc>
     
     <lastmod>2021-04-15</lastmod>
     
@@ -303,21 +317,7 @@
   </url>
   
   <url>
-    <loc>https://502zl.github.io/langblogs/journal/index.html</loc>
-    
-    <lastmod>2021-04-15</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://502zl.github.io/langblogs/supervise/index.html</loc>
-    
-    <lastmod>2021-04-15</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://502zl.github.io/langblogs/tags/index.html</loc>
     
     <lastmod>2021-04-15</lastmod>
     
@@ -330,10 +330,17 @@
     
   </url>
   
+  <url>
+    <loc>https://502zl.github.io/langblogs/tags/index.html</loc>
+    
+    <lastmod>2021-04-15</lastmod>
+    
+  </url>
+  
 
   <url>
     <loc>https://502zl.github.io/langblogs</loc>
-    <lastmod>2021-09-12</lastmod>
+    <lastmod>2021-10-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -341,217 +348,231 @@
   
   <url>
     <loc>https://502zl.github.io/langblogs/tags/%E5%89%8D%E7%AB%AF/</loc>
-    <lastmod>2021-09-12</lastmod>
+    <lastmod>2021-10-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://502zl.github.io/langblogs/tags/CSS/</loc>
-    <lastmod>2021-09-12</lastmod>
+    <lastmod>2021-10-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://502zl.github.io/langblogs/tags/HTTP/</loc>
-    <lastmod>2021-09-12</lastmod>
+    <lastmod>2021-10-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://502zl.github.io/langblogs/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</loc>
-    <lastmod>2021-09-12</lastmod>
+    <lastmod>2021-10-02</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://502zl.github.io/langblogs/tags/javascript/</loc>
+    <lastmod>2021-10-02</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://502zl.github.io/langblogs/tags/async/</loc>
+    <lastmod>2021-10-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://502zl.github.io/langblogs/tags/java/</loc>
-    <lastmod>2021-09-12</lastmod>
+    <lastmod>2021-10-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://502zl.github.io/langblogs/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/</loc>
-    <lastmod>2021-09-12</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://502zl.github.io/langblogs/tags/%E8%B7%A8%E5%9F%9F/</loc>
-    <lastmod>2021-09-12</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://502zl.github.io/langblogs/tags/JSONP/</loc>
-    <lastmod>2021-09-12</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://502zl.github.io/langblogs/tags/Spring/</loc>
-    <lastmod>2021-09-12</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://502zl.github.io/langblogs/tags/%E9%9A%8F%E7%AC%94/</loc>
-    <lastmod>2021-09-12</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://502zl.github.io/langblogs/tags/%E8%AF%B7%E7%9B%B8%E4%BF%A1%E7%94%9F%E6%B4%BB/</loc>
-    <lastmod>2021-09-12</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://502zl.github.io/langblogs/tags/HTML/</loc>
-    <lastmod>2021-09-12</lastmod>
+    <lastmod>2021-10-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://502zl.github.io/langblogs/tags/JQuery/</loc>
-    <lastmod>2021-09-12</lastmod>
+    <lastmod>2021-10-02</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://502zl.github.io/langblogs/tags/%E8%B7%A8%E5%9F%9F/</loc>
+    <lastmod>2021-10-02</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://502zl.github.io/langblogs/tags/JSONP/</loc>
+    <lastmod>2021-10-02</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://502zl.github.io/langblogs/tags/HTML/</loc>
+    <lastmod>2021-10-02</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://502zl.github.io/langblogs/tags/%E9%9A%8F%E7%AC%94/</loc>
+    <lastmod>2021-10-02</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://502zl.github.io/langblogs/tags/%E8%AF%B7%E7%9B%B8%E4%BF%A1%E7%94%9F%E6%B4%BB/</loc>
+    <lastmod>2021-10-02</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://502zl.github.io/langblogs/tags/Spring/</loc>
+    <lastmod>2021-10-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://502zl.github.io/langblogs/tags/JavaScript/</loc>
-    <lastmod>2021-09-12</lastmod>
+    <lastmod>2021-10-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://502zl.github.io/langblogs/tags/webpack/</loc>
-    <lastmod>2021-09-12</lastmod>
+    <lastmod>2021-10-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://502zl.github.io/langblogs/tags/%E5%B7%A5%E5%85%B7/</loc>
-    <lastmod>2021-09-12</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://502zl.github.io/langblogs/tags/%E7%BC%96%E7%A8%8B%E6%80%9D%E6%83%B3/</loc>
-    <lastmod>2021-09-12</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://502zl.github.io/langblogs/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</loc>
-    <lastmod>2021-09-12</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://502zl.github.io/langblogs/tags/%E6%95%A3%E5%88%97%E8%A1%A8/</loc>
-    <lastmod>2021-09-12</lastmod>
+    <lastmod>2021-10-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://502zl.github.io/langblogs/tags/%E7%AE%97%E6%B3%95/</loc>
-    <lastmod>2021-09-12</lastmod>
+    <lastmod>2021-10-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://502zl.github.io/langblogs/tags/%E6%8E%92%E5%BA%8F/</loc>
-    <lastmod>2021-09-12</lastmod>
+    <lastmod>2021-10-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://502zl.github.io/langblogs/tags/%E6%95%B0%E7%BB%84/</loc>
-    <lastmod>2021-09-12</lastmod>
+    <loc>https://502zl.github.io/langblogs/tags/%E7%BC%96%E7%A8%8B%E6%80%9D%E6%83%B3/</loc>
+    <lastmod>2021-10-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://502zl.github.io/langblogs/tags/%E5%A0%86/</loc>
-    <lastmod>2021-09-12</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://502zl.github.io/langblogs/tags/%E6%A0%88/</loc>
-    <lastmod>2021-09-12</lastmod>
+    <loc>https://502zl.github.io/langblogs/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</loc>
+    <lastmod>2021-10-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://502zl.github.io/langblogs/tags/%E5%9B%BE/</loc>
-    <lastmod>2021-09-12</lastmod>
+    <lastmod>2021-10-02</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://502zl.github.io/langblogs/tags/%E6%95%B0%E7%BB%84/</loc>
+    <lastmod>2021-10-02</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://502zl.github.io/langblogs/tags/%E6%95%A3%E5%88%97%E8%A1%A8/</loc>
+    <lastmod>2021-10-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://502zl.github.io/langblogs/tags/%E6%A0%91/</loc>
-    <lastmod>2021-09-12</lastmod>
+    <lastmod>2021-10-02</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://502zl.github.io/langblogs/tags/%E5%A0%86/</loc>
+    <lastmod>2021-10-02</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://502zl.github.io/langblogs/tags/%E6%A0%88/</loc>
+    <lastmod>2021-10-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://502zl.github.io/langblogs/tags/%E9%93%BE%E8%A1%A8/</loc>
-    <lastmod>2021-09-12</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://502zl.github.io/langblogs/tags/%E7%BC%96%E7%A8%8B%E6%8A%80%E5%B7%A7/</loc>
-    <lastmod>2021-09-12</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://502zl.github.io/langblogs/tags/%E8%BF%9E%E6%8E%A5%E6%B1%A0/</loc>
-    <lastmod>2021-09-12</lastmod>
+    <lastmod>2021-10-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://502zl.github.io/langblogs/tags/%E9%98%9F%E5%88%97/</loc>
-    <lastmod>2021-09-12</lastmod>
+    <lastmod>2021-10-02</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://502zl.github.io/langblogs/tags/%E7%BC%96%E7%A8%8B%E6%8A%80%E5%B7%A7/</loc>
+    <lastmod>2021-10-02</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://502zl.github.io/langblogs/tags/%E8%BF%9E%E6%8E%A5%E6%B1%A0/</loc>
+    <lastmod>2021-10-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://502zl.github.io/langblogs/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/</loc>
-    <lastmod>2021-09-12</lastmod>
+    <lastmod>2021-10-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -559,141 +580,148 @@
 
   
   <url>
-    <loc>https://502zl.github.io/langblogs/categories/CSS/</loc>
-    <lastmod>2021-09-12</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://502zl.github.io/langblogs/categories/CSS3/</loc>
-    <lastmod>2021-09-12</lastmod>
+    <lastmod>2021-10-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://502zl.github.io/langblogs/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</loc>
-    <lastmod>2021-09-12</lastmod>
+    <lastmod>2021-10-02</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://502zl.github.io/langblogs/categories/async/</loc>
+    <lastmod>2021-10-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://502zl.github.io/langblogs/categories/JDBC/</loc>
-    <lastmod>2021-09-12</lastmod>
+    <lastmod>2021-10-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://502zl.github.io/langblogs/categories/JSONP/</loc>
-    <lastmod>2021-09-12</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://502zl.github.io/langblogs/categories/java/</loc>
-    <lastmod>2021-09-12</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://502zl.github.io/langblogs/categories/Spring/</loc>
-    <lastmod>2021-09-12</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://502zl.github.io/langblogs/categories/%E9%9A%8F%E7%AC%94/</loc>
-    <lastmod>2021-09-12</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://502zl.github.io/langblogs/categories/HTML/</loc>
-    <lastmod>2021-09-12</lastmod>
+    <loc>https://502zl.github.io/langblogs/categories/CSS/</loc>
+    <lastmod>2021-10-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://502zl.github.io/langblogs/categories/JQuery/</loc>
-    <lastmod>2021-09-12</lastmod>
+    <lastmod>2021-10-02</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://502zl.github.io/langblogs/categories/java/</loc>
+    <lastmod>2021-10-02</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://502zl.github.io/langblogs/categories/JSONP/</loc>
+    <lastmod>2021-10-02</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://502zl.github.io/langblogs/categories/HTML/</loc>
+    <lastmod>2021-10-02</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://502zl.github.io/langblogs/categories/%E9%9A%8F%E7%AC%94/</loc>
+    <lastmod>2021-10-02</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://502zl.github.io/langblogs/categories/Spring/</loc>
+    <lastmod>2021-10-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://502zl.github.io/langblogs/categories/javascript/</loc>
-    <lastmod>2021-09-12</lastmod>
+    <lastmod>2021-10-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://502zl.github.io/langblogs/categories/webpack/</loc>
-    <lastmod>2021-09-12</lastmod>
+    <lastmod>2021-10-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://502zl.github.io/langblogs/categories/%E5%B7%A5%E5%85%B7/</loc>
-    <lastmod>2021-09-12</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://502zl.github.io/langblogs/categories/%E5%89%8D%E7%AB%AF/</loc>
-    <lastmod>2021-09-12</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://502zl.github.io/langblogs/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</loc>
-    <lastmod>2021-09-12</lastmod>
+    <lastmod>2021-10-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://502zl.github.io/langblogs/categories/%E6%8E%92%E5%BA%8F/</loc>
-    <lastmod>2021-09-12</lastmod>
+    <lastmod>2021-10-02</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://502zl.github.io/langblogs/categories/%E5%89%8D%E7%AB%AF/</loc>
+    <lastmod>2021-10-02</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://502zl.github.io/langblogs/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</loc>
+    <lastmod>2021-10-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://502zl.github.io/langblogs/categories/%E7%BC%96%E7%A8%8B%E6%8A%80%E5%B7%A7/</loc>
-    <lastmod>2021-09-12</lastmod>
+    <lastmod>2021-10-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://502zl.github.io/langblogs/categories/%E5%A4%9A%E7%BA%BF%E7%A8%8B/</loc>
-    <lastmod>2021-09-12</lastmod>
+    <lastmod>2021-10-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://502zl.github.io/langblogs/categories/Promise/</loc>
-    <lastmod>2021-09-12</lastmod>
+    <lastmod>2021-10-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://502zl.github.io/langblogs/categories/browser/</loc>
-    <lastmod>2021-09-12</lastmod>
+    <lastmod>2021-10-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
